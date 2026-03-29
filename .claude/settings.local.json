@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Read(//c/Users/trist/.claude/plugins/cache/ui-ux-pro-max-skill/**)",
+      "Bash(pnpm install:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm run:*)",
+      "Bash(curl -s http://localhost:3001/api/locations)",
+      "Bash(curl -s http://localhost:3001/api/locations/fuk-001)",
+      "Bash(curl -s http://localhost:3001/api/trip)",
+      "Bash(curl -s http://localhost:3001/api/itinerary)",
+      "Bash(curl -s http://localhost:3001/api/budget)",
+      "Bash(curl -s http://localhost:3001/api/gallery)",
+      "Bash(curl -s http://localhost:3001/api/locations/nonexistent)",
+      "Bash(pkill -f \"tsx watch src/index.ts\")",
+      "Bash(netstat -ano)",
+      "Bash(tasklist:*)",
+      "Bash(powershell -Command \"Get-Process -Id 22304 | Select-Object Id, ProcessName, Path, StartTime\")",
+      "Bash(powershell -Command \"Get-WmiObject Win32_Process -Filter 'ProcessId=22304' | Select-Object CommandLine\")"
+    ]
+  }
+}

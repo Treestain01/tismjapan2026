@@ -1,0 +1,10 @@
+{
+  "totalEstimatedJPY": 185000,
+  "breakdown": [
+    { "category": "accommodation", "totalJPY": 81000 },
+    { "category": "restaurant", "totalJPY": 24700 },
+    { "category": "attraction", "totalJPY": 6570 },
+    { "category": "shopping", "totalJPY": 30000 },
+    { "category": "transport", "totalJPY": 42730 }
+  ]
+}

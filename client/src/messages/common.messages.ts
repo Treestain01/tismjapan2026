@@ -1,0 +1,15 @@
+export const commonMessages = {
+  appTitle: 'TISM Japan 2026',
+  navHome: 'Home',
+  navMap: 'Map',
+  navItinerary: 'Itinerary',
+  navGallery: 'Gallery',
+  navBudget: 'Budget',
+  themeToggleLight: 'Switch to light mode',
+  themeToggleDark: 'Switch to dark mode',
+  openNavMenu: 'Open navigation menu',
+  loading: 'Loading...',
+  error: 'Something went wrong. Please try again.',
+  retry: 'Try again',
+  close: 'Close',
+} as const;

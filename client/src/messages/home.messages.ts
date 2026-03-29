@@ -1,0 +1,17 @@
+export const homeMessages = {
+  heroTitle: 'TISM Japan 2026',
+  heroSubtitle: 'Kyushu Awaits',
+  heroCta: 'Explore the Map',
+  overviewTitle: 'The Journey',
+  overviewDestination: 'Kyushu, Japan',
+  overviewLabel: 'Destination',
+  durationLabel: 'Duration',
+  durationValue: '10 Days',
+  citiesLabel: 'Cities',
+  countdownTitle: 'Departure In',
+  countdownDays: 'Days',
+  countdownHours: 'Hours',
+  countdownMinutes: 'Minutes',
+  countdownSeconds: 'Seconds',
+  countdownDeparted: "We're in Japan! \u{1F38C}",
+} as const;
