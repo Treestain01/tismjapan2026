@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Clock } from 'lucide-react';
 import { useItinerary } from '../hooks/useItinerary';
 import { useLocations } from '../hooks/useLocations';
 import { useMapStore } from '../store/map.store';
@@ -8,6 +9,48 @@ import { SkeletonLoader } from '../components/ui/SkeletonLoader';
 import { categoryConfig } from '../utils/categoryConfig';
 import { itineraryMessages } from '../messages/itinerary.messages';
 import { commonMessages } from '../messages/common.messages';
+import type { ItineraryEvent, Location } from '../types';
+
+function TimedEventRow({ event }: { event: ItineraryEvent }) {
+  return (
+    <div className="flex items-center gap-3 py-2.5 border-b border-bg last:border-0">
+      <div className="flex items-center gap-1.5 w-14 flex-shrink-0">
+        <Clock size={12} className="text-accent flex-shrink-0" />
+        <span className="text-accent text-xs font-semibold tabular-nums">{event.time}</span>
+      </div>
+      <p className="text-text-base text-sm">{event.label}</p>
+    </div>
+  );
+}
+
+interface LocationRowProps {
+  location: Location;
+  onViewMap: (id: string) => void;
+}
+
+function LocationRow({ location, onViewMap }: LocationRowProps) {
+  const cfg = categoryConfig[location.category];
+  return (
+    <button
+      onClick={() => onViewMap(location.id)}
+      className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-bg transition-colors text-left cursor-pointer group"
+    >
+      <div
+        className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
+        style={{ backgroundColor: cfg.colour }}
+      >
+        <cfg.Icon size={13} color="white" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <p className="text-text-base text-sm font-medium truncate group-hover:text-accent transition-colors">
+          {location.name}
+        </p>
+        <p className="text-muted text-xs truncate">{location.summary}</p>
+      </div>
+      <Badge label={cfg.label} colour={cfg.colour} />
+    </button>
+  );
+}
 
 export function ItineraryPage() {
   const { data: days, isLoading, error } = useItinerary();
@@ -40,8 +83,15 @@ export function ItineraryPage() {
           <div className="space-y-4">
             {days.map(day => {
               const dayLocations = locations?.filter(l => day.locationIds.includes(l.id)) ?? [];
+              const sortedEvents = day.events
+                ? [...day.events].sort((a, b) => a.time.localeCompare(b.time))
+                : [];
+              const hasEvents = sortedEvents.length > 0;
+              const hasLocations = dayLocations.length > 0;
+
               return (
                 <div key={day.day} className="rounded-2xl bg-surface border border-bg overflow-hidden">
+                  {/* Day header */}
                   <div className="p-4 border-b border-bg flex items-center justify-between">
                     <div>
                       <span className="text-accent text-sm font-semibold">
@@ -51,41 +101,48 @@ export function ItineraryPage() {
                     </div>
                     <div className="text-right">
                       <p className="text-muted text-xs">{day.city}</p>
-                      <p className="text-muted text-xs">{new Date(day.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric' })}</p>
+                      <p className="text-muted text-xs">
+                        {new Date(day.date + 'T00:00:00').toLocaleDateString('en-AU', {
+                          month: 'short',
+                          day: 'numeric',
+                        })}
+                      </p>
                     </div>
                   </div>
-                  <div className="p-4">
-                    {dayLocations.length === 0 ? (
-                      <p className="text-muted text-sm">{itineraryMessages.noLocations}</p>
-                    ) : (
-                      <div className="space-y-2">
-                        {dayLocations.map(loc => {
-                          const cfg = categoryConfig[loc.category];
-                          return (
-                            <button
-                              key={loc.id}
-                              onClick={() => handleLocationClick(loc.id)}
-                              className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-bg transition-colors text-left cursor-pointer group"
-                            >
-                              <div
-                                className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
-                                style={{ backgroundColor: cfg.colour }}
-                              >
-                                <cfg.Icon size={13} color="white" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-text-base text-sm font-medium truncate group-hover:text-accent transition-colors">
-                                  {loc.name}
-                                </p>
-                                <p className="text-muted text-xs truncate">{loc.summary}</p>
-                              </div>
-                              <Badge label={cfg.label} colour={cfg.colour} />
-                            </button>
-                          );
-                        })}
+
+                  {/* Timed events */}
+                  {hasEvents && (
+                    <div className="px-4 pt-3 pb-1">
+                      {sortedEvents.map((event, i) => (
+                        <TimedEventRow key={i} event={event} />
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Optional locations */}
+                  {hasLocations && (
+                    <div className="px-4 pt-3 pb-3">
+                      <p className="text-muted text-xs font-semibold uppercase tracking-wider mb-2">
+                        {itineraryMessages.optionalLabel}
+                      </p>
+                      <div className="space-y-1">
+                        {dayLocations.map(loc => (
+                          <LocationRow
+                            key={loc.id}
+                            location={loc}
+                            onViewMap={handleLocationClick}
+                          />
+                        ))}
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+
+                  {/* Empty state */}
+                  {!hasEvents && !hasLocations && (
+                    <div className="px-4 py-4">
+                      <p className="text-muted text-sm">{itineraryMessages.noLocations}</p>
+                    </div>
+                  )}
                 </div>
               );
             })}

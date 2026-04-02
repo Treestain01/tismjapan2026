@@ -1,0 +1,29 @@
+[
+  {
+    "id": "yuf-001",
+    "name": "Hoshino Resorts KAI Yufuin",
+    "category": "accommodation",
+    "coordinates": {
+      "lng": 131.3538,
+      "lat": 33.2788
+    },
+    "city": "Yufuin",
+    "summary": "Luxury onsen ryokan nestled in the Yufuin valley — our base for one night.",
+    "description": "KAI Yufuin is a Hoshino Resorts property offering a traditional ryokan experience with private onsen baths and kaiseki dining. Check-in is at 15:00 on 10 Dec and checkout at 12:00 on 11 Dec. Dinner (kaiseki) is at 17:30 on 10 Dec and breakfast is at 08:30 on 11 Dec — both included with the stay.",
+    "address": "Yufuin, Yufu, Oita Prefecture",
+    "openingHours": "Check-in 15:00 · Checkout 12:00",
+    "estimatedCost": "¥30,000 per night (meals included)",
+    "itineraryDays": [13, 14],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Official Site",
+        "url": "https://hoshinoresorts.com/en/hotels/kaiyufuin/"
+      },
+      {
+        "label": "Google Maps",
+        "url": "https://maps.google.com/?q=Hoshino+Resorts+KAI+Yufuin"
+      }
+    ]
+  }
+]

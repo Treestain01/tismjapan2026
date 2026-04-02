@@ -5,7 +5,8 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "merge-prod": "tsx scripts/merge-prod.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

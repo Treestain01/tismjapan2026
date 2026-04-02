@@ -13,9 +13,7 @@
     "address": "1-1 Hakataeki-Chuogai, Hakata Ward, Fukuoka",
     "openingHours": "Open 24 hours",
     "estimatedCost": null,
-    "itineraryDays": [
-      1
-    ],
+    "itineraryDays": [9],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -38,11 +36,7 @@
     "address": "3-4-1 Hakata-ekimae, Hakata Ward, Fukuoka",
     "openingHours": "Check-in from 15:00",
     "estimatedCost": "¥12,000 per night",
-    "itineraryDays": [
-      1,
-      2,
-      3
-    ],
+    "itineraryDays": [9, 10, 11],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -65,9 +59,7 @@
     "address": "1-1-1 Daimyo, Chuo Ward, Fukuoka",
     "openingHours": "Open 24 hours",
     "estimatedCost": "¥1,200",
-    "itineraryDays": [
-      2
-    ],
+    "itineraryDays": [10],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -94,9 +86,7 @@
     "address": "Ohorikoen, Chuo Ward, Fukuoka",
     "openingHours": "Open all hours (Japanese Garden: 9:00–17:00)",
     "estimatedCost": "Free (Japanese Garden: ¥240)",
-    "itineraryDays": [
-      2
-    ],
+    "itineraryDays": [10],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -119,9 +109,7 @@
     "address": "1 Jonai, Chuo Ward, Fukuoka",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [
-      2
-    ],
+    "itineraryDays": [10],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -144,9 +132,7 @@
     "address": "1-41 Kamikawabatamachi, Hakata Ward, Fukuoka",
     "openingHours": "4:00–22:00",
     "estimatedCost": "Free",
-    "itineraryDays": [
-      3
-    ],
+    "itineraryDays": [11],
     "imageUrls": [
       "client\\public\\kushida-shrine.jpg",
       "client\\public\\kushida-shrine-2.jpg"
@@ -172,9 +158,7 @@
     "address": "1-2 Sumiyoshi, Hakata Ward, Fukuoka",
     "openingHours": "10:00–21:00",
     "estimatedCost": "Varies",
-    "itineraryDays": [
-      3
-    ],
+    "itineraryDays": [11],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -201,9 +185,7 @@
     "address": "2-1-5 Haruyoshi, Chuo Ward, Fukuoka",
     "openingHours": "6:00–18:00 (most stalls closed Sunday)",
     "estimatedCost": "¥800",
-    "itineraryDays": [
-      2
-    ],
+    "itineraryDays": [10],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -226,9 +208,7 @@
     "address": "Nakasu, Hakata Ward, Fukuoka",
     "openingHours": "18:00–01:00 (weather dependent)",
     "estimatedCost": "¥3,000",
-    "itineraryDays": [
-      3
-    ],
+    "itineraryDays": [11],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -251,11 +231,7 @@
     "address": "1-18 Minami-Yamate, Nagasaki",
     "openingHours": "Check-in from 15:00",
     "estimatedCost": "¥15,000 per night",
-    "itineraryDays": [
-      4,
-      5,
-      6
-    ],
+    "itineraryDays": [12, 13, 14],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -278,9 +254,7 @@
     "address": "8-1 Minamiyamate, Nagasaki",
     "openingHours": "8:00–18:00 (later in summer)",
     "estimatedCost": "¥620",
-    "itineraryDays": [
-      5
-    ],
+    "itineraryDays": [13],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -307,9 +281,7 @@
     "address": "7-8 Matsuyamamachi, Nagasaki",
     "openingHours": "Always open (Museum: 8:30–17:30)",
     "estimatedCost": "Free (Museum: ¥200)",
-    "itineraryDays": [
-      5
-    ],
+    "itineraryDays": [13],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -332,9 +304,7 @@
     "address": "6-1 Dejimamachi, Nagasaki",
     "openingHours": "8:00–21:00",
     "estimatedCost": "¥510",
-    "itineraryDays": [
-      5
-    ],
+    "itineraryDays": [13],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -361,9 +331,7 @@
     "address": "Shinchi, Nagasaki",
     "openingHours": "Varies by restaurant (most: 11:00–21:00)",
     "estimatedCost": "¥1,500–¥2,000",
-    "itineraryDays": [
-      5
-    ],
+    "itineraryDays": [13],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -386,9 +354,7 @@
     "address": "Kajiya-machi, Nagasaki",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [
-      6
-    ],
+    "itineraryDays": [14],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -411,9 +377,7 @@
     "address": "Inasa-cho, Nagasaki",
     "openingHours": "9:00–22:00 (ropeway)",
     "estimatedCost": "¥1,250 (ropeway return)",
-    "itineraryDays": [
-      6
-    ],
+    "itineraryDays": [14],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -436,9 +400,7 @@
     "address": "1-1 Chuo-cho, Kagoshima",
     "openingHours": "Open 24 hours",
     "estimatedCost": null,
-    "itineraryDays": [
-      7
-    ],
+    "itineraryDays": [15],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -461,9 +423,7 @@
     "address": "Shiroyama, Kagoshima",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [
-      7
-    ],
+    "itineraryDays": [15],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -486,9 +446,7 @@
     "address": "Sakurajima, Kagoshima",
     "openingHours": "Ferry: 24 hours",
     "estimatedCost": "¥160 (ferry)",
-    "itineraryDays": [
-      8
-    ],
+    "itineraryDays": [16],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -511,9 +469,7 @@
     "address": "9700-1 Yoshino-cho, Kagoshima",
     "openingHours": "9:00–17:00",
     "estimatedCost": "¥1,000",
-    "itineraryDays": [
-      8
-    ],
+    "itineraryDays": [16],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -540,9 +496,7 @@
     "address": "Tenmonkan, Kagoshima",
     "openingHours": "10:00–20:00 (varies by shop)",
     "estimatedCost": "Varies",
-    "itineraryDays": [
-      9
-    ],
+    "itineraryDays": [17],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -565,14 +519,39 @@
     "address": "6-10 Higashisengokucho, Kagoshima",
     "openingHours": "11:30–14:30, 17:00–21:00",
     "estimatedCost": "¥4,000",
-    "itineraryDays": [
-      9
-    ],
+    "itineraryDays": [17],
     "imageUrls": [],
     "externalLinks": [
       {
         "label": "Google Maps",
         "url": "https://maps.google.com/?q=Kumasotei+Kagoshima"
+      }
+    ]
+  },
+  {
+    "id": "yuf-001",
+    "name": "Hoshino Resorts KAI Yufuin",
+    "category": "accommodation",
+    "coordinates": {
+      "lng": 131.3538,
+      "lat": 33.2788
+    },
+    "city": "Yufuin",
+    "summary": "Luxury onsen ryokan nestled in the Yufuin valley — our base for one night.",
+    "description": "KAI Yufuin is a Hoshino Resorts property offering a traditional ryokan experience with private onsen baths and kaiseki dining. Check-in is at 15:00 on 10 Dec and checkout at 12:00 on 11 Dec. Dinner (kaiseki) is at 17:30 on 10 Dec and breakfast is at 08:30 on 11 Dec — both included with the stay.",
+    "address": "Yufuin, Yufu, Oita Prefecture",
+    "openingHours": "Check-in 15:00 · Checkout 12:00",
+    "estimatedCost": "¥30,000 per night (meals included)",
+    "itineraryDays": [21, 22],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Official Site",
+        "url": "https://hoshinoresorts.com/en/hotels/kaiyufuin/"
+      },
+      {
+        "label": "Google Maps",
+        "url": "https://maps.google.com/?q=Hoshino+Resorts+KAI+Yufuin"
       }
     ]
   }

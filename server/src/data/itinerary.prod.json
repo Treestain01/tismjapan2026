@@ -1,0 +1,24 @@
+[
+  {
+    "day": 13,
+    "date": "2026-12-10",
+    "city": "Yufuin",
+    "title": "Yufuin — KAI Ryokan",
+    "locationIds": ["yuf-001"],
+    "events": [
+      { "time": "15:00", "label": "Check-in at KAI Yufuin" },
+      { "time": "17:30", "label": "Kaiseki dinner at KAI Yufuin" }
+    ]
+  },
+  {
+    "day": 14,
+    "date": "2026-12-11",
+    "city": "Yufuin",
+    "title": "Yufuin — Departure",
+    "locationIds": ["yuf-001"],
+    "events": [
+      { "time": "08:30", "label": "Breakfast at KAI Yufuin" },
+      { "time": "12:00", "label": "Checkout from KAI Yufuin" }
+    ]
+  }
+]

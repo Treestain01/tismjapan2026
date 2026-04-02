@@ -17,7 +17,10 @@
       "Bash(netstat -ano)",
       "Bash(tasklist:*)",
       "Bash(powershell -Command \"Get-Process -Id 22304 | Select-Object Id, ProcessName, Path, StartTime\")",
-      "Bash(powershell -Command \"Get-WmiObject Win32_Process -Filter 'ProcessId=22304' | Select-Object CommandLine\")"
+      "Bash(powershell -Command \"Get-WmiObject Win32_Process -Filter 'ProcessId=22304' | Select-Object CommandLine\")",
+      "Bash(pnpm --filter client run typecheck)",
+      "Bash(pnpm --filter server run typecheck)",
+      "Bash(npx tsx:*)"
     ]
   }
 }

@@ -10,7 +10,7 @@ export interface Location {
   name: string;
   category: LocationCategory;
   coordinates: { lng: number; lat: number };
-  city: 'Fukuoka' | 'Nagasaki' | 'Kagoshima';
+  city: 'Fukuoka' | 'Nagasaki' | 'Kagoshima' | 'Yufuin';
   summary: string;
   description: string;
   address: string;
@@ -21,12 +21,18 @@ export interface Location {
   externalLinks: { label: string; url: string }[];
 }
 
+export interface ItineraryEvent {
+  time: string;
+  label: string;
+}
+
 export interface ItineraryDay {
   day: number;
   date: string;
   city: string;
   title: string;
   locationIds: string[];
+  events?: ItineraryEvent[];
 }
 
 export interface GalleryImage {
