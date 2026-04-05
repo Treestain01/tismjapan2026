@@ -1,6 +1,4 @@
 interface FrankfurterResponse {
-  amount: number;
-  base: string;
   date: string;
   rates: Record<string, number>;
 }
@@ -10,8 +8,10 @@ export interface JPYtoAUDResult {
   date: string;
 }
 
+const BASE = import.meta.env.VITE_API_URL ?? '';
+
 export async function fetchJPYtoAUD(): Promise<JPYtoAUDResult> {
-  const res = await fetch('https://api.frankfurter.app/latest?from=JPY&to=AUD');
+  const res = await fetch(`${BASE}/api/currency`);
   if (!res.ok) throw new Error(`Currency API error: ${res.status}`);
   const data: FrankfurterResponse = await res.json();
   const rate = data.rates['AUD'];

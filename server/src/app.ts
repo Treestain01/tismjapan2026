@@ -8,6 +8,7 @@ import galleryRouter from './routes/gallery.route';
 import budgetRouter from './routes/budget.route';
 import tripRouter from './routes/trip.route';
 import extractRouter from './routes/extract.route';
+import currencyRouter from './routes/currency.route';
 
 const app = express();
 const corsOrigin = process.env.CORS_ORIGIN?.split(',') ?? ['http://localhost:5173'];
@@ -23,6 +24,7 @@ app.use('/api/gallery', galleryRouter);
 app.use('/api/budget', budgetRouter);
 app.use('/api/trip', tripRouter);
 app.use('/api/extract-location', extractRouter);
+app.use('/api/currency', currencyRouter);
 
 app.use((_req, res) => {
   res.status(404).json({ error: 'Not found' });
