@@ -41,15 +41,15 @@ export const tripRepository = {
 
   addCity: async (city: string): Promise<TripInfo> => {
     if (sql) {
-      await sql`
-        UPDATE trip_info
-        SET cities = array_append(cities, ${city})
-        WHERE id = 1 AND NOT (${city} = ANY(cities))
-      `;
       const rows = await sql`SELECT * FROM trip_info WHERE id = 1`;
       const r = rows as unknown as Record<string, unknown>[];
       if (!r[0]) throw new Error('Trip info not found');
-      return rowToTripInfo(r[0]);
+      const current = rowToTripInfo(r[0]);
+      if (!current.cities.includes(city)) {
+        await sql`UPDATE trip_info SET cities = array_append(cities, ${city}) WHERE id = 1`;
+        current.cities.push(city);
+      }
+      return current;
     }
     return jsonAddCity(city);
   },
