@@ -29,10 +29,12 @@ export async function extractFromMapsUrl(rawUrl: string): Promise<ExtractedLocat
   if (SHORT_HOSTNAMES.has(parsedUrl.hostname)) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
-    let redirectResponse: Awaited<ReturnType<typeof fetch>>;
+    // Use a local interface to avoid conflicts with @neondatabase/serverless's Response type
+    interface RedirectResponse { headers: { get(name: string): string | null } }
+    let redirectResponse: RedirectResponse;
     try {
       // redirect: 'manual' gives us the Location header without following it
-      redirectResponse = await fetch(rawUrl, { redirect: 'manual', signal: controller.signal });
+      redirectResponse = await fetch(rawUrl, { redirect: 'manual', signal: controller.signal }) as unknown as RedirectResponse;
     } catch {
       clearTimeout(timeoutId);
       throw new Error('Could not resolve Maps link — network error or timeout');
