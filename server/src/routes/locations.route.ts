@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { locationsRepository } from '../repositories/locations.repository';
-import type { CreateLocationBody, LocationCategory } from '../types';
+import type { CreateLocationBody, UpdateLocationBody, LocationCategory } from '../types';
 
 const VALID_CATEGORIES = new Set<LocationCategory>([
   'attraction', 'restaurant', 'accommodation', 'shopping', 'transport',
@@ -52,6 +52,36 @@ router.post('/', async (req, res, next) => {
     }
     const location = await locationsRepository.create(body);
     res.status(201).json(location);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.put('/:id', async (req, res, next) => {
+  try {
+    const existing = await locationsRepository.findById(req.params.id);
+    if (!existing) {
+      res.status(404).json({ error: 'Location not found' });
+      return;
+    }
+    const body = req.body as UpdateLocationBody;
+    if (
+      !body.name ||
+      !body.city ||
+      body.coordinates?.lng == null ||
+      body.coordinates?.lat == null ||
+      typeof body.coordinates.lng !== 'number' ||
+      typeof body.coordinates.lat !== 'number'
+    ) {
+      res.status(400).json({ error: 'Missing required fields: name, city, coordinates' });
+      return;
+    }
+    if (!body.category || !VALID_CATEGORIES.has(body.category)) {
+      res.status(400).json({ error: 'Invalid or missing category' });
+      return;
+    }
+    const updated = await locationsRepository.update(req.params.id, body);
+    res.json(updated);
   } catch (err) {
     next(err);
   }

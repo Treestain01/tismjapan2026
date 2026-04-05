@@ -91,3 +91,37 @@ export interface AddItineraryPayload {
   day: CreateItineraryDayBody;
   location: CreateLocationBody;
 }
+
+export interface UpdateLocationBody {
+  name: string;
+  category: LocationCategory;
+  coordinates: { lng: number; lat: number };
+  city: string;
+  summary: string;
+  description: string;
+  address: string;
+  openingHours?: string | null;
+  estimatedCost?: string | null;
+  itineraryDays: number[];
+  imageUrls: string[];
+  externalLinks: { label: string; url: string }[];
+}
+
+export interface UpdateItineraryDayBody {
+  date: string;
+  city: string;
+  title: string;
+  locationIds: string[];
+  events?: { time: string; label: string }[];
+}
+
+export interface UpdateItineraryPayload {
+  locationUpdates: Array<{ id: string; body: UpdateLocationBody }>;
+  oldDay: number;
+  newDay: number;
+  oldDayDate: string;
+  oldDayCity: string;
+  oldDayTitle: string;
+  oldDayLocationIds: string[];
+  day: UpdateItineraryDayBody;
+}

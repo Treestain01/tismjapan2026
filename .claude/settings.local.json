@@ -30,7 +30,14 @@
       "Bash(pnpm --filter tism-japan-server run typecheck)",
       "Bash(pnpm --filter tism-japan-server run build)",
       "Bash(pnpm --filter tism-japan-client run typecheck)",
-      "Bash(pnpm:*)"
+      "Bash(pnpm:*)",
+      "Bash(find /d/repos/tism-japan-2026 -path */node_modules -prune -o -type f \\\\\\(-name *itinerary* -o -name *types* -o -name *api* -o -name *hook* -o -name *App.tsx -o -name *router* \\\\\\) -print)",
+      "Bash(find /d/repos/tism-japan-2026 -path */node_modules -prune -o -type f \\\\\\(-name *.d.ts -o -name types.ts -o -name index.ts \\\\\\) -path */src/* -print)",
+      "Bash(python:*)",
+      "Bash(printenv DATABASE_URL)",
+      "Bash(powershell -Command \"[System.Environment]::GetEnvironmentVariable\\(''DATABASE_URL'', ''User''\\); [System.Environment]::GetEnvironmentVariable\\(''DATABASE_URL'', ''Machine''\\)\")",
+      "Bash(node -e \"const p=require\\(''''./server/node_modules/tsx/package.json''''\\); console.log\\(''''tsx version:'''', p.version\\)\")",
+      "Bash(grep -h \"FROM\\\\|INTO\\\\|UPDATE\\\\|TABLE\" D:/repos/tism-japan-2026/server/src/repositories/*.repository.ts)"
     ]
   }
 }

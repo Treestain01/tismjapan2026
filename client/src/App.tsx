@@ -6,6 +6,7 @@ import { ItineraryPage } from './pages/ItineraryPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { BudgetPage } from './pages/BudgetPage';
 import { AddItineraryPage } from './pages/AddItineraryPage';
+import { EditItineraryPage } from './pages/EditItineraryPage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/budget" element={<BudgetPage />} />
         <Route path="/add" element={<AddItineraryPage />} />
+        <Route path="/edit/:day" element={<EditItineraryPage />} />
       </Routes>
     </BrowserRouter>
   );

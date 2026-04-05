@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { sql } from '../db/client';
-import type { Location, CreateLocationBody } from '../types';
+import type { Location, CreateLocationBody, UpdateLocationBody } from '../types';
 
 const JSON_PATH = join(__dirname, '../data/locations.json');
 
@@ -32,6 +32,30 @@ async function jsonFindById(id: string): Promise<Location | undefined> {
   return all.find(l => l.id === id);
 }
 
+async function jsonUpdate(id: string, body: UpdateLocationBody): Promise<Location> {
+  const all = await jsonFindAll();
+  const idx = all.findIndex(l => l.id === id);
+  if (idx === -1) throw new Error(`Location ${id} not found`);
+  const updated: Location = {
+    id,
+    name: body.name,
+    category: body.category,
+    coordinates: body.coordinates,
+    city: body.city as Location['city'],
+    summary: body.summary,
+    description: body.description,
+    address: body.address,
+    openingHours: body.openingHours ?? null,
+    estimatedCost: body.estimatedCost ?? null,
+    itineraryDays: body.itineraryDays,
+    imageUrls: body.imageUrls,
+    externalLinks: body.externalLinks,
+  };
+  all[idx] = updated;
+  writeFileSync(JSON_PATH, JSON.stringify(all, null, 2));
+  return updated;
+}
+
 async function jsonCreate(location: Location): Promise<Location> {
   const all = await jsonFindAll();
   all.push(location);
@@ -55,6 +79,29 @@ export const locationsRepository = {
       return r[0] ? rowToLocation(r[0]) : undefined;
     }
     return jsonFindById(id);
+  },
+
+  update: async (id: string, body: UpdateLocationBody): Promise<Location> => {
+    if (sql) {
+      await sql`
+        UPDATE locations SET
+          name = ${body.name}, category = ${body.category},
+          lng = ${body.coordinates.lng}, lat = ${body.coordinates.lat},
+          city = ${body.city}, summary = ${body.summary},
+          description = ${body.description}, address = ${body.address},
+          opening_hours = ${body.openingHours ?? null},
+          estimated_cost = ${body.estimatedCost ?? null},
+          itinerary_days = ${body.itineraryDays},
+          image_urls = ${body.imageUrls},
+          external_links = ${JSON.stringify(body.externalLinks)}
+        WHERE id = ${id}
+      `;
+      const rows = await sql`SELECT * FROM locations WHERE id = ${id}`;
+      const r = rows as unknown as Record<string, unknown>[];
+      if (!r[0]) throw new Error(`Location ${id} not found`);
+      return rowToLocation(r[0]);
+    }
+    return jsonUpdate(id, body);
   },
 
   create: async (body: CreateLocationBody): Promise<Location> => {

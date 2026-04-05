@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Clock } from 'lucide-react';
+import { Clock, PencilLine } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useItinerary } from '../hooks/useItinerary';
 import { useLocations } from '../hooks/useLocations';
 import { useMapStore } from '../store/map.store';
@@ -9,6 +10,7 @@ import { SkeletonLoader } from '../components/ui/SkeletonLoader';
 import { categoryConfig } from '../utils/categoryConfig';
 import { itineraryMessages } from '../messages/itinerary.messages';
 import { commonMessages } from '../messages/common.messages';
+import { editMessages } from '../messages/edit.messages';
 import type { ItineraryEvent, Location } from '../types';
 
 function TimedEventRow({ event }: { event: ItineraryEvent }) {
@@ -90,7 +92,7 @@ export function ItineraryPage() {
               const hasLocations = dayLocations.length > 0;
 
               return (
-                <div key={day.day} className="rounded-2xl bg-surface border border-bg overflow-hidden">
+                <div key={day.day} className="rounded-2xl bg-surface border border-bg overflow-hidden group">
                   {/* Day header */}
                   <div className="p-4 border-b border-bg flex items-center justify-between">
                     <div>
@@ -99,14 +101,26 @@ export function ItineraryPage() {
                       </span>
                       <h2 className="text-text-base font-bold text-lg">{day.title}</h2>
                     </div>
-                    <div className="text-right">
-                      <p className="text-muted text-xs">{day.city}</p>
-                      <p className="text-muted text-xs">
-                        {new Date(day.date + 'T00:00:00').toLocaleDateString('en-AU', {
-                          month: 'short',
-                          day: 'numeric',
-                        })}
-                      </p>
+                    <div className="flex items-center gap-3">
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => navigate(`/edit/${day.day}`)}
+                        aria-label={editMessages.editDayAriaLabel}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 text-xs font-semibold cursor-pointer"
+                      >
+                        <PencilLine size={12} />
+                        {editMessages.editButtonLabel}
+                      </motion.button>
+                      <div className="text-right">
+                        <p className="text-muted text-xs">{day.city}</p>
+                        <p className="text-muted text-xs">
+                          {new Date(day.date + 'T00:00:00').toLocaleDateString('en-AU', {
+                            month: 'short',
+                            day: 'numeric',
+                          })}
+                        </p>
+                      </div>
                     </div>
                   </div>
 

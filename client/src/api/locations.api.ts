@@ -1,4 +1,4 @@
-import type { Location, CreateLocationBody } from '../types';
+import type { Location, CreateLocationBody, UpdateLocationBody } from '../types';
 
 const BASE = import.meta.env.VITE_API_URL ?? '';
 
@@ -21,5 +21,15 @@ export async function createLocation(body: CreateLocationBody): Promise<Location
     body: JSON.stringify(body),
   });
   if (!res.ok) throw new Error(`Failed to create location: ${res.status}`);
+  return res.json() as Promise<Location>;
+}
+
+export async function updateLocation(id: string, body: UpdateLocationBody): Promise<Location> {
+  const res = await fetch(`${BASE}/api/locations/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`Failed to update location: ${res.status}`);
   return res.json() as Promise<Location>;
 }

@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { sql } from '../db/client';
-import type { ItineraryDay, CreateItineraryDayBody } from '../types';
+import type { ItineraryDay, CreateItineraryDayBody, UpdateItineraryDayBody } from '../types';
 
 const JSON_PATH = join(__dirname, '../data/itinerary.json');
 
@@ -33,6 +33,25 @@ async function jsonFindAll(): Promise<ItineraryDay[]> {
 async function jsonFindByDay(day: number): Promise<ItineraryDay | undefined> {
   const all = await jsonFindAll();
   return all.find(d => d.day === day);
+}
+
+async function jsonUpdateDay(day: number, body: UpdateItineraryDayBody): Promise<ItineraryDay> {
+  const all = await jsonFindAll();
+  const idx = all.findIndex(d => d.day === day);
+  if (idx === -1) throw new Error(`Day ${day} not found`);
+  const updated: ItineraryDay = {
+    day,
+    date: body.date,
+    city: body.city,
+    title: body.title,
+    locationIds: body.locationIds,
+  };
+  if (body.events && body.events.length > 0) {
+    updated.events = body.events;
+  }
+  all[idx] = updated;
+  writeFileSync(JSON_PATH, JSON.stringify(all, null, 2));
+  return updated;
 }
 
 async function jsonCreate(body: CreateItineraryDayBody): Promise<ItineraryDay> {
@@ -145,6 +164,37 @@ export const itineraryRepository = {
       return rowToItineraryDay(days[0], evtRows as unknown as Record<string, unknown>[]);
     }
     return jsonAddLocation(day, locationIds, events);
+  },
+
+  update: async (day: number, body: UpdateItineraryDayBody): Promise<ItineraryDay> => {
+    if (sql) {
+      await sql`BEGIN`;
+      try {
+        await sql`
+          UPDATE itinerary_days
+          SET date = ${body.date}, city = ${body.city}, title = ${body.title},
+              location_ids = ${body.locationIds}::text[]
+          WHERE day = ${day}
+        `;
+        await sql`DELETE FROM itinerary_events WHERE day = ${day}`;
+        const events = body.events ?? [];
+        for (let i = 0; i < events.length; i++) {
+          await sql`
+            INSERT INTO itinerary_events (day, time, label, sort_order)
+            VALUES (${day}, ${events[i].time}, ${events[i].label}, ${i})
+          `;
+        }
+        await sql`COMMIT`;
+      } catch (err) {
+        await sql`ROLLBACK`;
+        throw err;
+      }
+      const dayRows = await sql`SELECT * FROM itinerary_days WHERE day = ${day}`;
+      const evtRows = await sql`SELECT * FROM itinerary_events WHERE day = ${day} ORDER BY sort_order`;
+      const days = dayRows as unknown as Record<string, unknown>[];
+      return rowToItineraryDay(days[0], evtRows as unknown as Record<string, unknown>[]);
+    }
+    return jsonUpdateDay(day, body);
   },
 
   create: async (body: CreateItineraryDayBody): Promise<ItineraryDay> => {

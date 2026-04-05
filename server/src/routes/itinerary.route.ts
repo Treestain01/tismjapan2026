@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { itineraryRepository } from '../repositories/itinerary.repository';
-import type { CreateItineraryDayBody } from '../types';
+import type { CreateItineraryDayBody, UpdateItineraryDayBody } from '../types';
 
 const router = Router();
 
@@ -32,6 +32,30 @@ router.post('/', async (req, res, next) => {
     }
     const day = await itineraryRepository.create(body);
     res.status(201).json(day);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.put('/:day', async (req, res, next) => {
+  try {
+    const day = parseInt(req.params.day, 10);
+    if (isNaN(day)) {
+      res.status(400).json({ error: 'Day must be a number' });
+      return;
+    }
+    const existing = await itineraryRepository.findByDay(day);
+    if (!existing) {
+      res.status(404).json({ error: `Day ${day} not found` });
+      return;
+    }
+    const body = req.body as UpdateItineraryDayBody;
+    if (!body.date || !body.city || !body.title) {
+      res.status(400).json({ error: 'Missing required fields: date, city, title' });
+      return;
+    }
+    const updated = await itineraryRepository.update(day, body);
+    res.json(updated);
   } catch (err) {
     next(err);
   }
