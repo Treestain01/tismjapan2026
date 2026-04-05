@@ -20,7 +20,17 @@
       "Bash(powershell -Command \"Get-WmiObject Win32_Process -Filter 'ProcessId=22304' | Select-Object CommandLine\")",
       "Bash(pnpm --filter client run typecheck)",
       "Bash(pnpm --filter server run typecheck)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "WebSearch",
+      "Bash(python scripts/search.py \"travel itinerary japan premium luxury editorial\" --design-system -f markdown -p \"TISM Japan 2026\")",
+      "Bash(python cli/assets/scripts/search.py \"travel itinerary japan premium luxury editorial\" --design-system -f markdown -p \"TISM Japan 2026\")",
+      "Bash(python cli/assets/scripts/search.py \"form wizard multi-step progressive disclosure\" --domain ux -n 5)",
+      "Bash(pnpm --filter server add @neondatabase/serverless)",
+      "Bash(pnpm --filter tism-japan-server add @neondatabase/serverless)",
+      "Bash(pnpm --filter tism-japan-server run typecheck)",
+      "Bash(pnpm --filter tism-japan-server run build)",
+      "Bash(pnpm --filter tism-japan-client run typecheck)",
+      "Bash(pnpm:*)"
     ]
   }
 }

@@ -5,6 +5,8 @@ export const commonMessages = {
   navItinerary: 'Itinerary',
   navGallery: 'Gallery',
   navBudget: 'Budget',
+  navAdd: 'Add',
+  navAddAriaLabel: 'Add to itinerary',
   themeToggleLight: 'Switch to light mode',
   themeToggleDark: 'Switch to dark mode',
   openNavMenu: 'Open navigation menu',

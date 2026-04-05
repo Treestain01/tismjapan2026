@@ -4,5 +4,5 @@ export const itineraryMessages = {
   dayLabel: 'Day',
   viewOnMap: 'View on map',
   noLocations: 'No locations planned for this day yet.',
-  optionalLabel: 'Optional',
+  referencesLabel: 'References',
 } as const;

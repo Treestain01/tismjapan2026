@@ -3,8 +3,12 @@ import { budgetRepository } from '../repositories/budget.repository';
 
 const router = Router();
 
-router.get('/', (_req, res) => {
-  res.json(budgetRepository.get());
+router.get('/', async (_req, res, next) => {
+  try {
+    res.json(await budgetRepository.get());
+  } catch (err) {
+    next(err);
+  }
 });
 
 export default router;

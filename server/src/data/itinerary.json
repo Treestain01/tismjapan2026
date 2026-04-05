@@ -4,73 +4,116 @@
     "date": "2026-11-28",
     "city": "Fukuoka",
     "title": "Arrival in Fukuoka",
-    "locationIds": ["fuk-001", "fuk-002"]
+    "locationIds": [
+      "fuk-001",
+      "fuk-002"
+    ]
   },
   {
     "day": 10,
     "date": "2026-11-29",
     "city": "Fukuoka",
     "title": "Fukuoka Exploration",
-    "locationIds": ["fuk-003", "fuk-004", "fuk-005", "fuk-008"]
+    "locationIds": [
+      "fuk-003",
+      "fuk-004",
+      "fuk-005",
+      "fuk-008"
+    ]
   },
   {
     "day": 11,
     "date": "2026-11-30",
     "city": "Fukuoka",
     "title": "Hakata Culture & Night Food",
-    "locationIds": ["fuk-006", "fuk-007", "fuk-009"]
+    "locationIds": [
+      "fuk-006",
+      "fuk-007",
+      "fuk-009"
+    ]
   },
   {
     "day": 12,
     "date": "2026-12-01",
     "city": "Nagasaki",
     "title": "Travel to Nagasaki",
-    "locationIds": ["nag-001"]
+    "locationIds": [
+      "nag-001"
+    ]
   },
   {
     "day": 13,
     "date": "2026-12-02",
     "city": "Nagasaki",
     "title": "Nagasaki History & Culture",
-    "locationIds": ["nag-002", "nag-003", "nag-004", "nag-005"]
+    "locationIds": [
+      "nag-002",
+      "nag-003",
+      "nag-004",
+      "nag-005"
+    ]
   },
   {
     "day": 14,
     "date": "2026-12-03",
     "city": "Nagasaki",
     "title": "Bridges & Night Views",
-    "locationIds": ["nag-006", "nag-007"]
+    "locationIds": [
+      "nag-006",
+      "nag-007",
+      "e334c6fb-2b7b-408c-a522-b51e17d1cb70"
+    ],
+    "events": []
   },
   {
     "day": 15,
     "date": "2026-12-04",
     "city": "Kagoshima",
     "title": "Travel to Kagoshima",
-    "locationIds": ["kag-001", "kag-002"]
+    "locationIds": [
+      "kag-001",
+      "kag-002"
+    ]
   },
   {
     "day": 16,
     "date": "2026-12-05",
     "city": "Kagoshima",
     "title": "Volcanoes & Gardens",
-    "locationIds": ["kag-003", "kag-004"]
+    "locationIds": [
+      "kag-003",
+      "kag-004",
+      "102557e8-eb8e-4fa4-9da3-aa66f99ba575"
+    ],
+    "events": []
   },
   {
     "day": 17,
     "date": "2026-12-06",
     "city": "Kagoshima",
     "title": "Shopping & Farewell Dinner",
-    "locationIds": ["kag-005", "kag-006"]
+    "locationIds": [
+      "kag-005",
+      "kag-006"
+    ]
   },
   {
     "day": 21,
     "date": "2026-12-10",
     "city": "Yufuin",
     "title": "Yufuin — KAI Ryokan",
-    "locationIds": ["yuf-001"],
+    "locationIds": [
+      "yuf-001"
+    ],
     "events": [
-      { "time": "15:00", "label": "Check-in at KAI Yufuin" },
-      { "time": "17:30", "label": "Kaiseki dinner at KAI Yufuin" }
+      {
+        "time": "15:00",
+        "label": "Check-in at KAI Yufuin"
+      },
+      {
+        "time": "17:30",
+        "label": "Kaiseki dinner at KAI Yufuin"
+      }
     ]
   },
   {
@@ -78,10 +121,18 @@
     "date": "2026-12-11",
     "city": "Yufuin",
     "title": "Yufuin — Departure",
-    "locationIds": ["yuf-001"],
+    "locationIds": [
+      "yuf-001"
+    ],
     "events": [
-      { "time": "08:30", "label": "Breakfast at KAI Yufuin" },
-      { "time": "12:00", "label": "Checkout from KAI Yufuin" }
+      {
+        "time": "08:30",
+        "label": "Breakfast at KAI Yufuin"
+      },
+      {
+        "time": "12:00",
+        "label": "Checkout from KAI Yufuin"
+      }
     ]
   }
 ]

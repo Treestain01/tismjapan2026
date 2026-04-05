@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, Plus } from 'lucide-react';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { MobileDrawer } from './MobileDrawer';
 import { commonMessages } from '../../messages/common.messages';
@@ -57,6 +57,20 @@ export function Navbar() {
                   {label}
                 </NavLink>
               ))}
+              <NavLink
+                to="/add"
+                aria-label={commonMessages.navAddAriaLabel}
+                className={({ isActive }) =>
+                  `ml-2 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-colors duration-150 cursor-pointer ${
+                    isActive
+                      ? 'bg-accent text-white'
+                      : 'bg-accent/20 text-accent hover:bg-accent hover:text-white'
+                  }`
+                }
+              >
+                <Plus size={15} />
+                {commonMessages.navAdd}
+              </NavLink>
               <ThemeToggle />
             </div>
 
@@ -75,7 +89,11 @@ export function Navbar() {
         </div>
       </nav>
 
-      <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} links={navLinks} />
+      <MobileDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        links={[...navLinks, { to: '/add', label: commonMessages.navAdd }]}
+      />
     </>
   );
 }

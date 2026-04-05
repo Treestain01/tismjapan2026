@@ -119,11 +119,11 @@ export function ItineraryPage() {
                     </div>
                   )}
 
-                  {/* Optional locations */}
+                  {/* References locations */}
                   {hasLocations && (
                     <div className="px-4 pt-3 pb-3">
                       <p className="text-muted text-xs font-semibold uppercase tracking-wider mb-2">
-                        {itineraryMessages.optionalLabel}
+                        {itineraryMessages.referencesLabel}
                       </p>
                       <div className="space-y-1">
                         {dayLocations.map(loc => (

@@ -54,3 +54,40 @@ export interface TripInfo {
   description: string;
   cities: string[];
 }
+
+export interface CreateLocationBody {
+  id: string;
+  name: string;
+  category: LocationCategory;
+  coordinates: { lng: number; lat: number };
+  city: string;
+  summary: string;
+  description: string;
+  address: string;
+  openingHours?: string | null;
+  estimatedCost?: string | null;
+  itineraryDays: number[];
+  imageUrls: string[];
+  externalLinks: { label: string; url: string }[];
+}
+
+export interface CreateItineraryDayBody {
+  day: number;
+  date: string;
+  city: string;
+  title: string;
+  locationIds: string[];
+  events?: { time: string; label: string }[];
+}
+
+export interface ExtractedLocation {
+  name: string;
+  coordinates: { lng: number; lat: number };
+  mapsUrl: string;
+  address: string;
+}
+
+export interface AddItineraryPayload {
+  day: CreateItineraryDayBody;
+  location: CreateLocationBody;
+}

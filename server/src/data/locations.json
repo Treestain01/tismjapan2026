@@ -13,7 +13,9 @@
     "address": "1-1 Hakataeki-Chuogai, Hakata Ward, Fukuoka",
     "openingHours": "Open 24 hours",
     "estimatedCost": null,
-    "itineraryDays": [9],
+    "itineraryDays": [
+      9
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -27,8 +29,8 @@
     "name": "Hotel Forza Hakata",
     "category": "accommodation",
     "coordinates": {
-      "lng": 130.4120,
-      "lat": 33.5890
+      "lng": 130.412,
+      "lat": 33.589
     },
     "city": "Fukuoka",
     "summary": "Our base in Fukuoka — modern hotel a short walk from Hakata Station.",
@@ -36,7 +38,11 @@
     "address": "3-4-1 Hakata-ekimae, Hakata Ward, Fukuoka",
     "openingHours": "Check-in from 15:00",
     "estimatedCost": "¥12,000 per night",
-    "itineraryDays": [9, 10, 11],
+    "itineraryDays": [
+      9,
+      10,
+      11
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -59,7 +65,9 @@
     "address": "1-1-1 Daimyo, Chuo Ward, Fukuoka",
     "openingHours": "Open 24 hours",
     "estimatedCost": "¥1,200",
-    "itineraryDays": [10],
+    "itineraryDays": [
+      10
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -78,7 +86,7 @@
     "category": "attraction",
     "coordinates": {
       "lng": 130.3806,
-      "lat": 33.5850
+      "lat": 33.585
     },
     "city": "Fukuoka",
     "summary": "A beautiful urban park built around a large central lake with a Japanese garden.",
@@ -86,7 +94,9 @@
     "address": "Ohorikoen, Chuo Ward, Fukuoka",
     "openingHours": "Open all hours (Japanese Garden: 9:00–17:00)",
     "estimatedCost": "Free (Japanese Garden: ¥240)",
-    "itineraryDays": [10],
+    "itineraryDays": [
+      10
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -109,7 +119,9 @@
     "address": "1 Jonai, Chuo Ward, Fukuoka",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [10],
+    "itineraryDays": [
+      10
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -132,7 +144,9 @@
     "address": "1-41 Kamikawabatamachi, Hakata Ward, Fukuoka",
     "openingHours": "4:00–22:00",
     "estimatedCost": "Free",
-    "itineraryDays": [11],
+    "itineraryDays": [
+      11
+    ],
     "imageUrls": [
       "client\\public\\kushida-shrine.jpg",
       "client\\public\\kushida-shrine-2.jpg"
@@ -158,7 +172,9 @@
     "address": "1-2 Sumiyoshi, Hakata Ward, Fukuoka",
     "openingHours": "10:00–21:00",
     "estimatedCost": "Varies",
-    "itineraryDays": [11],
+    "itineraryDays": [
+      11
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -176,7 +192,7 @@
     "name": "Yanagibashi Rengo Market",
     "category": "restaurant",
     "coordinates": {
-      "lng": 130.4050,
+      "lng": 130.405,
       "lat": 33.5912
     },
     "city": "Fukuoka",
@@ -185,7 +201,9 @@
     "address": "2-1-5 Haruyoshi, Chuo Ward, Fukuoka",
     "openingHours": "6:00–18:00 (most stalls closed Sunday)",
     "estimatedCost": "¥800",
-    "itineraryDays": [10],
+    "itineraryDays": [
+      10
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -208,7 +226,9 @@
     "address": "Nakasu, Hakata Ward, Fukuoka",
     "openingHours": "18:00–01:00 (weather dependent)",
     "estimatedCost": "¥3,000",
-    "itineraryDays": [11],
+    "itineraryDays": [
+      11
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -231,7 +251,11 @@
     "address": "1-18 Minami-Yamate, Nagasaki",
     "openingHours": "Check-in from 15:00",
     "estimatedCost": "¥15,000 per night",
-    "itineraryDays": [12, 13, 14],
+    "itineraryDays": [
+      12,
+      13,
+      14
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -254,7 +278,9 @@
     "address": "8-1 Minamiyamate, Nagasaki",
     "openingHours": "8:00–18:00 (later in summer)",
     "estimatedCost": "¥620",
-    "itineraryDays": [13],
+    "itineraryDays": [
+      13
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -281,7 +307,9 @@
     "address": "7-8 Matsuyamamachi, Nagasaki",
     "openingHours": "Always open (Museum: 8:30–17:30)",
     "estimatedCost": "Free (Museum: ¥200)",
-    "itineraryDays": [13],
+    "itineraryDays": [
+      13
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -295,7 +323,7 @@
     "name": "Dejima Wharf",
     "category": "attraction",
     "coordinates": {
-      "lng": 129.8710,
+      "lng": 129.871,
       "lat": 32.7468
     },
     "city": "Nagasaki",
@@ -304,7 +332,9 @@
     "address": "6-1 Dejimamachi, Nagasaki",
     "openingHours": "8:00–21:00",
     "estimatedCost": "¥510",
-    "itineraryDays": [13],
+    "itineraryDays": [
+      13
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -331,7 +361,9 @@
     "address": "Shinchi, Nagasaki",
     "openingHours": "Varies by restaurant (most: 11:00–21:00)",
     "estimatedCost": "¥1,500–¥2,000",
-    "itineraryDays": [13],
+    "itineraryDays": [
+      13
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -354,7 +386,9 @@
     "address": "Kajiya-machi, Nagasaki",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [14],
+    "itineraryDays": [
+      14
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -377,7 +411,9 @@
     "address": "Inasa-cho, Nagasaki",
     "openingHours": "9:00–22:00 (ropeway)",
     "estimatedCost": "¥1,250 (ropeway return)",
-    "itineraryDays": [14],
+    "itineraryDays": [
+      14
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -400,7 +436,9 @@
     "address": "1-1 Chuo-cho, Kagoshima",
     "openingHours": "Open 24 hours",
     "estimatedCost": null,
-    "itineraryDays": [15],
+    "itineraryDays": [
+      15
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -415,7 +453,7 @@
     "category": "attraction",
     "coordinates": {
       "lng": 130.5508,
-      "lat": 31.5970
+      "lat": 31.597
     },
     "city": "Kagoshima",
     "summary": "A hilltop viewpoint with Kagoshima's best views of Sakurajima volcano across the bay.",
@@ -423,7 +461,9 @@
     "address": "Shiroyama, Kagoshima",
     "openingHours": "Always open",
     "estimatedCost": "Free",
-    "itineraryDays": [15],
+    "itineraryDays": [
+      15
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -446,7 +486,9 @@
     "address": "Sakurajima, Kagoshima",
     "openingHours": "Ferry: 24 hours",
     "estimatedCost": "¥160 (ferry)",
-    "itineraryDays": [16],
+    "itineraryDays": [
+      16
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -469,7 +511,9 @@
     "address": "9700-1 Yoshino-cho, Kagoshima",
     "openingHours": "9:00–17:00",
     "estimatedCost": "¥1,000",
-    "itineraryDays": [16],
+    "itineraryDays": [
+      16
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -487,7 +531,7 @@
     "name": "Tenmonkan Shopping Street",
     "category": "shopping",
     "coordinates": {
-      "lng": 130.5540,
+      "lng": 130.554,
       "lat": 31.5895
     },
     "city": "Kagoshima",
@@ -496,7 +540,9 @@
     "address": "Tenmonkan, Kagoshima",
     "openingHours": "10:00–20:00 (varies by shop)",
     "estimatedCost": "Varies",
-    "itineraryDays": [17],
+    "itineraryDays": [
+      17
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -510,7 +556,7 @@
     "name": "Kumasotei Restaurant",
     "category": "restaurant",
     "coordinates": {
-      "lng": 130.5530,
+      "lng": 130.553,
       "lat": 31.5901
     },
     "city": "Kagoshima",
@@ -519,7 +565,9 @@
     "address": "6-10 Higashisengokucho, Kagoshima",
     "openingHours": "11:30–14:30, 17:00–21:00",
     "estimatedCost": "¥4,000",
-    "itineraryDays": [17],
+    "itineraryDays": [
+      17
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -542,7 +590,10 @@
     "address": "Yufuin, Yufu, Oita Prefecture",
     "openingHours": "Check-in 15:00 · Checkout 12:00",
     "estimatedCost": "¥30,000 per night (meals included)",
-    "itineraryDays": [21, 22],
+    "itineraryDays": [
+      21,
+      22
+    ],
     "imageUrls": [],
     "externalLinks": [
       {
@@ -552,6 +603,281 @@
       {
         "label": "Google Maps",
         "url": "https://maps.google.com/?q=Hoshino+Resorts+KAI+Yufuin"
+      }
+    ]
+  },
+  {
+    "id": "32ee9c62-3ee1-4b11-9598-572dcaf473f7",
+    "name": "Cape Sata Observation Deck",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata Observation Deck",
+    "description": "Cape Sata Observation Deck",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "87025d6c-57c5-4716-8eec-9ad8d6b75e47",
+    "name": "Cape Sata Observation Deck",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata Observation Deck",
+    "description": "Cape Sata Observation Deck",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      17
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "1fc8e556-f17b-486d-bcbc-baf088359e60",
+    "name": "Cape Sata Observation Deck",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata Observation Deck",
+    "description": "Cape Sata Observation Deck",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      17
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "dec0dd30-3dd4-486a-a06c-06b652094439",
+    "name": "Cape Sata Observation Deck",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata Observation Deck",
+    "description": "Cape Sata Observation Deck",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      17
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "7f5acc5f-f397-480a-8e46-56fd4b8fa07c",
+    "name": "Cape Sata Observation Deck",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata Observation Deck",
+    "description": "Cape Sata Observation Deck",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      17
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "098300af-2d94-4521-974d-76b29bbed1d2",
+    "name": "Cape Sata",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata",
+    "description": "Cape Sata",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "e29ab5c7-a366-4d81-9304-7f014a41a081",
+    "name": "Cape Sata",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata",
+    "description": "Cape Sata",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "08ecced7-09ec-4846-a429-d2d2f237497a",
+    "name": "Cape Sata",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata",
+    "description": "Cape Sata",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "d1a78406-08e5-4e21-9196-68fa94e2b23e",
+    "name": "Cape Sata",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 130.6591073,
+      "lat": 30.9972545
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata",
+    "description": "Cape Sata",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@30.9972545,130.6591073,17z/data=!3m1!4b1!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "102557e8-eb8e-4fa4-9da3-aa66f99ba575",
+    "name": "Cape Sata",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 129.7574399,
+      "lat": 32.5563759
+    },
+    "city": "Kagoshima",
+    "summary": "Cape Sata",
+    "description": "Cape Sata",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      16
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@32.5563759,129.7574399,8z/data=!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  },
+  {
+    "id": "e334c6fb-2b7b-408c-a522-b51e17d1cb70",
+    "name": "Capte Sata again",
+    "category": "attraction",
+    "coordinates": {
+      "lng": 129.7574399,
+      "lat": 32.5563759
+    },
+    "city": "Kagoshima",
+    "summary": "Capte Sata again",
+    "description": "Capte Sata again",
+    "address": "Cape Sata Park Observation Deck",
+    "openingHours": null,
+    "estimatedCost": null,
+    "itineraryDays": [
+      14
+    ],
+    "imageUrls": [],
+    "externalLinks": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/place/Cape+Sata+Park+Observation+Deck/@32.5563759,129.7574399,8z/data=!4m6!3m5!1s0x353c34ec71f41e6f:0xb9933f59fe6ba78a!8m2!3d30.9972545!4d130.6591073!16zL20vMGI1bGQ5?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
       }
     ]
   }
