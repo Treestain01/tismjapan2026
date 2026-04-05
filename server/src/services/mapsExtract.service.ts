@@ -29,7 +29,7 @@ export async function extractFromMapsUrl(rawUrl: string): Promise<ExtractedLocat
   if (SHORT_HOSTNAMES.has(parsedUrl.hostname)) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
-    let redirectResponse: Response;
+    let redirectResponse: Awaited<ReturnType<typeof fetch>>;
     try {
       // redirect: 'manual' gives us the Location header without following it
       redirectResponse = await fetch(rawUrl, { redirect: 'manual', signal: controller.signal });
