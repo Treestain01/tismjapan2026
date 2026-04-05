@@ -2,14 +2,12 @@ import { Router } from 'express';
 
 const router = Router();
 
-interface FrankfurterResponse {
-  date: string;
-  rates: Record<string, number>;
-}
+interface FrankfurterResponse { date: string; rates: Record<string, number> }
+interface FetchResponse { ok: boolean; json(): Promise<unknown> }
 
 router.get('/', async (_req, res, next) => {
   try {
-    const upstream = await fetch('https://api.frankfurter.app/latest?from=JPY&to=AUD');
+    const upstream = await fetch('https://api.frankfurter.app/latest?from=JPY&to=AUD') as unknown as FetchResponse;
     if (!upstream.ok) {
       res.status(502).json({ error: 'Currency service unavailable' });
       return;
